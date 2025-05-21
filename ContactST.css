@@ -1,0 +1,54 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: #1F1D1C;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: clamp(0.5, 2vw + 0.5, 1.2); /* OR use transform: scale(...) */
+    width: 70%;
+}
+
+.heading h1 {
+    font-family: 'Modak';
+    font-weight: 400;
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.5vw #1F1D1C;
+    paint-order: stroke fill;
+    font-size: clamp(2.5rem, 10vw, 15rem);
+}
+
+.heading .stars {
+    width: clamp(60px, 14vw, 350px);
+    height: auto;
+}
+
+.rightborder {
+    height: 100%;
+    width: 15%;
+    background-color: #443C3D;
+    right: 0;
+    position: absolute;
+    border-left: 0.3vw solid black;
+}
+
+.cube {
+    height: 60%;
+    width: 30%;
+    background-color: #443C3D;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    border: 0.3vw solid black;
+    z-index: 2;
+    border-radius: 1.5vw;
+}

@@ -1,0 +1,200 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: #1F1D1C;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    width: 7vw;
+    transition: all 1s ease;
+    margin-left: 10%;
+}
+
+a:hover {
+    transform: rotate(360deg);
+    transition: all 1s ease;
+    filter: blur(1px);
+}
+
+a img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    font-family: 'Modak';
+    font-weight: 400;
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.5vw #1F1D1C;
+    paint-order: stroke fill;
+    font-size: clamp(2.5rem, 10vw, 15rem);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: clamp(0.5, 2vw + 0.5, 1.2); /* OR use transform: scale(...) */
+}
+
+.header .starpic {
+    width: clamp(60px, 14vw, 350px);
+    height: auto;
+}
+
+h2 {
+    font-family: 'Modak';
+    font-weight: 400;
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.5vw #1F1D1C;
+    paint-order: stroke fill;
+    font-size: clamp(2.5rem, 3.5vw, 15rem);
+    text-align: center;
+}
+
+p {
+    font-family: 'Mochiy Pop One';
+    font-weight: 400;
+    color: #E2D8CC;
+    font-size: clamp(1.5rem, 1vw, 15rem);
+    text-align: center;
+    width: 80%
+}
+
+.fullbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullbox img {
+    width: 40%;
+    height: auto;
+    border-radius: 2.6vw;
+    border: 0.3vw solid #E2D8CC;
+}
+
+.leftie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.rightie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.line {
+    flex-grow: 1;
+    height: 0.3vw;
+    background-color: #E2D8CC;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #443C3D;
+    width: 50%;
+    border-radius: 1.2vw;
+    border: 0.3vw solid #E2D8CC;
+    padding: 1%;
+}
+
+@media only screen and (max-width: 1460px) {
+    p {
+        font-size: clamp(1.2rem, 1vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    p {
+        font-size: clamp(1.1rem, 1vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 1045px) {
+    p {
+        font-size: clamp(1rem, 1vw, 15rem);
+    }
+
+    h2 {
+        font-size: clamp(2rem, 3.5vw, 15rem);
+        line-height: 90%;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    p {
+        font-size: clamp(0.9rem, 1vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    p {
+        font-size: clamp(0.7rem, 1vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    a {
+        width: 9vw;
+    }
+
+    .fullbox img {
+        width: 70%;
+    }
+
+    .fullbox  {
+        gap: 5vh;
+    }
+
+    .leftie {
+        flex-direction: column;
+    }
+
+    .rightie {
+        flex-direction: column-reverse;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 3.5vw, 15rem);
+        line-height: 90%;
+    }
+
+    .info {
+        padding: 2%;
+        gap: 1vh;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    p {
+        font-size: clamp(0.6rem, 1vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    p {
+        font-size: clamp(0.5rem, 1vw, 15rem);
+    }
+
+    a {
+        margin-left: 5%;
+    }
+}
+
+

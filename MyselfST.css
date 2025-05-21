@@ -1,0 +1,289 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: #1F1D1C;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.top {
+    width: 100%;
+    background-color: #443C3D;
+    height: 7vw;
+}
+
+.top img {
+    width: auto;
+    height: 100%;
+    display: block;
+}
+
+.top img:hover {
+    transform: rotate(360deg);
+    transition: all 1s ease;
+}
+
+h1 {
+    font-family: 'Modak';
+    font-weight: 400;
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.5vw #1F1D1C;
+    paint-order: stroke fill;
+    font-size: clamp(2.5rem, 10vw, 15rem);
+    position: absolute;
+    margin-left: 25vw;
+    transform: translateY(9vw);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bottom {
+    width: 100%;
+    background-color: #443C3D;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+.circ {
+    width: 10%;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.myselftext {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-family: 'Mochiy Pop One';
+    font-weight: 400;
+    color: #E2D8CC;
+    font-size: clamp(1.5rem, 1.5vw, 15rem);
+    width: 22%;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 35%;
+}
+
+.cardholder {
+    display: flex;
+    justify-content: center;
+    gap: 12vw;
+    margin-top: 10%;
+}
+
+.card1 {
+    background-color: #443C3D;
+    width: 23vw;
+    height: 35vw;
+    border-radius: 1vw;
+    position: relative;
+    z-index: 3;
+    border: solid 0.5vw #E2D8CC;
+}
+
+.card2 {
+    background-color: #443C3D;
+    width: 23vw;
+    height: 35vw;
+    border-radius: 1vw;
+    transform: translateY(50%);
+    position: relative;
+    z-index: 3;
+    border: solid 0.5vw #E2D8CC;
+}
+
+.cardholder h2 {
+    font-family: 'Modak';
+    font-weight: 400;
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.5vw #1F1D1C;
+    paint-order: stroke fill;
+    font-size: clamp(2.5rem, 5vw, 15rem);
+    width: 100%;
+    text-align: center;
+}
+
+.cardholder p {
+    width: 100%;
+}
+
+.card2 h2 {
+    font-size: clamp(2.5rem, 4vw, 15rem);
+    padding-top: 1vw;
+}
+
+.textgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.background {
+    width: 150%;
+    height: 25vw;
+    transform: translateY(-10%) rotate(36deg) translateX(-20%);
+    background-color: #B59B79;
+    position: relative;
+    z-index: 2;
+    border: solid 0.5vw #E2D8CC;
+}
+
+@media only screen and (max-width: 1450px) {
+    .textgroup {
+        gap: 1vw;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    p {
+        font-size: clamp(1.3rem, 1.3vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    p {
+        font-size: clamp(1.1rem, 1.5vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .background  {
+        width: 150%;
+    }
+
+    p {
+        font-size: clamp(1rem, 1.5vw, 15rem);
+    }
+
+    .textgroup {
+        gap: 0.5vw;
+    }
+
+    .card2 h2 {
+        font-size: clamp(2rem, 1.5vw, 15rem);
+    }
+
+    .card1 {
+        width: 27vw;
+        height: 40vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+
+    .card2 {
+        width: 27vw;
+        height: 40vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .card1 {
+        gap: 0;
+    }
+
+    .card2 {
+        gap: 0;
+    }
+
+    p {
+        font-size: clamp(0.8rem, 1.5vw, 15rem);
+    }
+
+    .cardholder p {
+        font-size: clamp(0.9rem, 1.5vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    p {
+        font-size: clamp(0.7rem, 1.5vw, 15rem);
+    }
+
+    .cardholder p {
+        font-size: clamp(0.7rem, 1.5vw, 15rem);
+    }
+
+    .card2 h2 {
+        font-size: clamp(1.8rem, 1.5vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card2 h2 {
+        font-size: clamp(1.6rem, 1.5vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    p {
+        font-size: clamp(0.6rem, 1.5vw, 15rem);
+    }
+
+    .card2 h2 {
+        font-size: clamp(1.5rem, 1.5vw, 15rem);
+    }
+
+    .card1 h2 {
+        font-size: clamp(1.8rem, 1.5vw, 15rem);
+    }
+
+    .textgroup {
+        gap: 0;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .cardholder p {
+        font-size: clamp(0.6rem, 1.5vw, 15rem);
+    }
+
+    .card2 h2 {
+        font-size: clamp(1.4rem, 1.5vw, 15rem);
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .cardholder p {
+        font-size: clamp(0.6rem, 1.5vw, 15rem);
+    }
+
+    .card1 {
+        width: 29vw;
+        height: 44vw;
+    }
+
+    .card2 {
+        width: 29vw;
+        height: 44vw;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .cardholder p {
+        font-size: clamp(0.5rem, 1.5vw, 15rem);
+    }
+
+    .card2 h2 {
+        font-size: clamp(1.2rem, 1.5vw, 15rem);
+    }
+}
