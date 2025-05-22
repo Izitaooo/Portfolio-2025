@@ -32,6 +32,18 @@ body {
     height: auto;
 }
 
+a img {
+    width: auto;
+    height: 12%;
+    display: block;
+    margin-top: 1vw;
+}
+
+a img:hover {
+    transform: rotate(360deg);
+    transition: all 1s ease;
+}
+
 .rightborder {
     height: 100%;
     width: 15%;
@@ -39,10 +51,12 @@ body {
     right: 0;
     position: absolute;
     border-left: 0.3vw solid black;
+    display: flex;
+    justify-content: center;
 }
 
 .cube {
-    height: 60%;
+    height: auto;
     width: 30%;
     background-color: #443C3D;
     right: 0;
@@ -51,4 +65,266 @@ body {
     border: 0.3vw solid black;
     z-index: 2;
     border-radius: 1.5vw;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+h2 {
+    font-family: 'Modak';
+    font-weight: 400;
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.5vw #1F1D1C;
+    paint-order: stroke fill;
+    font-size: clamp(1.5rem, 5vw, 15rem);
+}
+
+.linkholder {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2vw;
+}
+
+.linkholder2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2vw;
+}
+
+.cube img {
+    width: 50%;
+}
+
+.icontext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 11vw;
+}
+
+h3 {
+    font-family: 'Modak';
+    font-weight: 400;
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.3vw #1F1D1C;
+    paint-order: stroke fill;
+    font-size: clamp(1rem, 2vw, 15rem);
+}
+/* contact */
+
+.contact-section {
+    width: 100%;
+    max-width: 40vw;
+    margin-left: 5vw;
+    position: absolute;
+    bottom: 4vw;
+}
+
+.contact-intro p {
+    font-family: 'Mochiy Pop One';
+    font-weight: 400;
+    color: #E2D8CC;
+    font-size: clamp(1rem, 1.3vw, 15rem);
+}
+
+.form-group-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-left: 2vw;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.form-group label {
+    font-family: 'Mochiy Pop One';
+    font-weight: 400;
+    color: #E2D8CC;
+    font-size: clamp(1rem, 1.3vw, 15rem);
+}
+
+.form-input,
+.form-textarea {
+    border: none;
+    background-color: #1F1D1C;
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    box-shadow: 0 60px 0px inset #1F1D1C;
+}
+
+.form-input:-webkit-autofill,
+.form-textarea:-webkit-autofill {
+    -webkit-text-fill-color: #E2D8CC;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #6b7280;
+}
+
+.form-input:not(:placeholder-shown),
+.form-textarea:not(:placeholder-shown){
+    color: #E2D8CC;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+    outline: 2px solid #B59B79;
+    outline-offset: 2px;
+    color: #E2D8CC;
+}
+
+.form-textarea {
+    min-height: 120px;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 1.2rem;
+    height: 5vw;
+    background-color: #443C3D;
+    border: 0.3vw solid black;
+    padding: 5px;
+    border-radius: 2vw;
+    font-family: 'Modak';
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 15rem);
+    color: #E2D8CC;
+    -webkit-text-stroke: 0.5vw #1F1D1C;
+    paint-order: stroke fill;
+    cursor: pointer;
+    letter-spacing: 0.5vw;
+}
+
+@media only screen and (max-width: 1300px) {
+    .cube {
+        width: 35%;
+        gap: 2vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .cube {
+        width: 40%;
+        gap: 3vw;
+    }
+
+    .form-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .cube {
+        width: 50%;
+        gap: 5vw;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 7vw, 15rem);
+    }
+
+    a img {
+        height: 8%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .form-submit {
+        height: 6vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .heading {
+        width: 100%;
+    }
+
+    .cube {
+        width: 100%;
+        height: 30%;
+        gap: 0vw;
+    }
+
+    .cube img {
+        width: 30%;
+    }
+
+    .linkholder2 {
+        margin-top: 9%;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 8vw, 15rem);
+    }
+
+    .contact-intro p {
+        font-size: clamp(1rem, 1vw, 15rem);
+        text-align: center;
+    }
+
+    .form-submit {
+        height: 7vw;
+        padding: 0px;
+    }
+
+    .contact-section {
+        max-width: 90vw;
+        position: relative;
+    }
+
+    .rightborder {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .form-submit {
+        height: 9vw;
+        border-radius: 3vw;
+    }
+
+    .linkholder2 {
+        margin-top: 13%;
+    }
+
+    a img {
+        height: 6%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .heading  {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .linkholder2 {
+        margin-top: 17%;
+    }
+}
+
+@media only screen and (max-width: 333px) {
+    .linkholder2 {
+        margin-top: 23%;
+    }
+
+    a img {
+        height: 5%;
+    }
+}
+
