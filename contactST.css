@@ -32,14 +32,14 @@ body {
     height: auto;
 }
 
-a img {
+.rightborder a img {
     width: auto;
     height: 12%;
     display: block;
     margin-top: 1vw;
 }
 
-a img:hover {
+.rightborder a img:hover {
     transform: rotate(360deg);
     transition: all 1s ease;
 }
@@ -94,7 +94,7 @@ h2 {
     gap: 2vw;
 }
 
-.cube img {
+.icontext img {
     width: 50%;
 }
 
@@ -237,7 +237,7 @@ h3 {
         font-size: clamp(1.5rem, 7vw, 15rem);
     }
 
-    a img {
+    .rightborder a img {
         height: 8%;
     }
 }
@@ -301,7 +301,7 @@ h3 {
         margin-top: 13%;
     }
 
-    a img {
+    .rightborder a img {
         height: 6%;
     }
 }
@@ -323,7 +323,7 @@ h3 {
         margin-top: 23%;
     }
 
-    a img {
+    .rightborder a img {
         height: 5%;
     }
 }
