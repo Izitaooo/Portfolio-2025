@@ -5,6 +5,10 @@ body {
     background: #1F1D1C;
 }
 
+::selection {
+    background-color: #D4B17A;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -19,7 +23,6 @@ a {
 a:hover {
     transform: rotate(360deg);
     transition: all 1s ease;
-    filter: blur(1px);
 }
 
 a img {

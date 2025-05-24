@@ -13,6 +13,10 @@ body {
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: #D4B17A;
+}
+
 a {
     text-decoration: none;
 }
@@ -89,7 +93,7 @@ a {
     display: flex;
     gap: 3.5%;
     position: fixed;
-    left: 3vw;
+    left: 4vw;
     height: 50%;
     width:  39vw;
 }
@@ -136,6 +140,28 @@ a {
 
 .link:hover {
     transform: translateY(0);
+}
+
+@media (pointer:coarse) {
+    .link {
+        transform: translateY(0);
+    }
+
+    .link:nth-of-type(2) {
+        transform: translateY(0);
+    }
+
+    .link:nth-of-type(3) {
+        transform: translateY(0);
+    }
+
+    .link:nth-of-type(4) {
+        transform: translateY(0);
+    }
+
+    .link:nth-of-type(5) {
+        transform: translateY(0);
+    }
 }
 
 .transformation {

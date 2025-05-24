@@ -12,6 +12,10 @@ body {
     height: 155vh;
 }
 
+::selection {
+    background-color: #D4B17A;
+}
+
 .nav {
     position: fixed;
     width: 5vw;

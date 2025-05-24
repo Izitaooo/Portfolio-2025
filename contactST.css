@@ -10,6 +10,10 @@ body {
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: #D4B17A;
+}
+
 .heading {
     display: flex;
     align-items: center;
@@ -96,6 +100,12 @@ h2 {
 
 .icontext img {
     width: 50%;
+    transition: all 1s ease;
+}
+
+.icontext img:hover {
+    transform: rotate(6deg);
+    transition: all 0.5s ease;
 }
 
 .icontext {
