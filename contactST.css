@@ -36,17 +36,19 @@ body {
     height: auto;
 }
 
-.rightborder a img {
+.rightborder img {
     width: auto;
-    height: 12%;
+    height: 6.5vw;
     display: block;
     margin-top: 1vw;
+    transition: all 1s ease;
 }
 
-.rightborder a img:hover {
+.rightborder img:hover {
     transform: rotate(360deg);
     transition: all 1s ease;
 }
+
 
 .rightborder {
     height: 100%;
@@ -247,7 +249,7 @@ h3 {
         font-size: clamp(1.5rem, 7vw, 15rem);
     }
 
-    .rightborder a img {
+    .rightborder img {
         height: 8%;
     }
 }
@@ -294,11 +296,13 @@ h3 {
     .contact-section {
         max-width: 90vw;
         position: relative;
+        margin-top: 5vw;
     }
 
     .rightborder {
         display: none;
     }
+
 }
 
 @media only screen and (max-width: 450px) {
@@ -311,9 +315,6 @@ h3 {
         margin-top: 13%;
     }
 
-    .rightborder a img {
-        height: 6%;
-    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -333,8 +334,5 @@ h3 {
         margin-top: 23%;
     }
 
-    .rightborder a img {
-        height: 5%;
-    }
 }
 
