@@ -21,7 +21,7 @@ body {
     width: 6vw;
     right: 1vw;
     top: 2vh;
-    z-index: 99;
+    z-index: 7;
     transition: all 1s ease;
 }
 
@@ -126,6 +126,8 @@ body {
     background-color: #1F1D1C;
 }
 
+/* CARD SECTION */
+
 .socent {
     width: 100%;
     top: 20vh;
@@ -142,6 +144,7 @@ body {
     width: 18vw;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     border-radius: 20px;
+    cursor: pointer;
 }
 
 /* This container is needed to position the front and back side */
@@ -196,7 +199,8 @@ img:nth-child(2) {
     justify-content: center;
 }
 
-.flip-card-front h1 {
+.flip-card-front h1,
+.flip-card-back h1 {
     font-family: 'Modak';
     font-weight: 400;
     color: #E2D8CC;
@@ -243,13 +247,18 @@ img:nth-child(2) {
     display: none;
 }
 
+@keyframes cardTrans {
+    from {background-color: #E2D8CC;}
+    to {background-color: #1F1D1C;}
+}
+
+
 /* STUPID CARD SECTION */
 
-.flip-card-front.active {
 
-    color: black;
+.flip-card-front.active {
     border-radius: 20px;
-    border: 4px solid black;
+    border: 0px solid black;
     overflow: hidden;
 
     h1 {
@@ -260,19 +269,280 @@ img:nth-child(2) {
         display: block;
     }
 
-    .back {
-        background-color: #B59B79;
-        width: 100vw;
-        height: 10vw;
+    .black {
+        width: 95vw;
+        height: 435vw;
+        background-color: #E2D8CC;
         display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 2vw;
+        animation-name: cardTrans;
+        animation-duration: 3.5s;
+        animation-fill-mode: forwards;
+        gap: 7vw;
+    }
+
+    .back-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #B59B79;
+        width: 92vw;
+        height: 8vw;
+        margin-top: 1.5vw;
+        border-radius: 3vw;
+        cursor: pointer;
+        outline: 0.5vw solid #E2D8CC;
+    }
+
+    h4  {
+        font-family: 'Modak';
+        font-weight: 400;
+        color: #E2D8CC;
+        -webkit-text-stroke: 0.5vw #1F1D1C;
+        paint-order: stroke fill;
+        font-size: clamp(2.5rem, 6vw, 15rem);
+        margin: 0;
+        width: 50%;
+        height: 100%;
+    }
+
+    .infotext {
+        width: 100%;
+        height: 5%;
+        background-color: #443C3D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 0.5vw solid #E2D8CC;
+        position: relative;
+        z-index: 10;
 
     }
 
+    .infotext p {
+        font-family: 'Mochiy Pop One';
+        font-weight: 400;
+        color: #E2D8CC;
+        font-size: clamp(0.5rem, 2vw, 15rem);
+        width: 70%;
+        text-align: left;
+    }
+
+    h3  {
+        font-family: 'Modak';
+        font-weight: 400;
+        color: #E2D8CC;
+        -webkit-text-stroke: 0.5vw #1F1D1C;
+        paint-order: stroke fill;
+        font-size: clamp(2.5rem, 9vw, 15rem);
+        margin: 0;
+        width: 100%;
+    }
+
+    .gametext {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .gametext p {
+        font-family: 'Mochiy Pop One';
+        font-weight: 400;
+        color: #E2D8CC;
+        font-size: clamp(0.5rem, 2vw, 15rem);
+        width: 85%;
+        text-align: center;
+    }
+
+    .credits {
+        position: relative;
+        top: -7vw;
+    }
+
+    .credits-right {
+        position: relative;
+        top: -7vw;
+    }
+
+    .credits-right p {
+        font-family: 'Mochiy Pop One';
+        font-weight: 400;
+        color: #E2D8CC;
+        font-size: clamp(0.2rem, 1vw, 15rem);
+        width: 90%;
+        text-align: end;
+    }
+
+    .credits p {
+        font-family: 'Mochiy Pop One';
+        font-weight: 400;
+        color: #E2D8CC;
+        font-size: clamp(0.2rem, 1vw, 15rem);
+        width: 35%;
+        text-align: end;
+    }
+
+    .credits a,
+    .credits-right a {
+        color: #E2D8CC;
+    }
+
+    .picholder {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        flex-wrap: wrap;
+        scale: clamp(0.5, 2vw + 0.5, 1.2);
+        margin-top: 5vw;
+    }
+
+    .screenshot {
+        width: 45%;
+        height: auto;
+        border-radius: 1vw;
+        border: 0.4vw solid #E2D8CC;
+        position: relative;
+        z-index: 3;
+    }
+
+    .screenshot1 {
+        width: 45%;
+    }
+
+    .screenshot2 {
+        bottom: -7vw;
+        right: 7vw;
+        z-index: 2;
+    }
+
+    .screenshot3 {
+        z-index: 1;
+        bottom: 10vw;
+        right: -7vw;
+    }
+
+    .charpic {
+        width: 30%;
+        height: auto;
+        position: relative;
+        z-index: 4;
+        right: 65vw;
+        bottom: 12vw;
+    }
+
+    .games-divider {
+        background-color: #443C3D;
+        width: 100%;
+        height: 9vw;
+        bottom: 8vw;
+        position: relative;
+        outline: 0.5vw solid #E2D8CC;
+        transform: rotate(-2deg);
+    }
+
+    .game2 {
+        margin-top: -5vw;
+    }
+
+    .game2 h3 {
+        width: 90%;
+        text-align: right;
+    }
+
+    .game2text p {
+        text-align: right;
+        width: 82%;
+    }
+
+    .screenshot2val {
+        z-index: 4;
+    }
+
+    .screenshot3val {
+        margin-top: 8vw;
+        width: 35%;
+        margin-right: 10vw;
+    }
+
+    .games-divider2 {
+        transform: rotate(2deg);
+    }
+
+    .game3 {
+        margin-top: -5vw;
+    }
+
+    .game3 h3 {
+        margin-left: 10%;
+        width: 90%;
+        text-align: left;
+    }
+
+    .game3text p {
+        text-align: left;
+        width: 70%;
+        margin-left: -10%;
+    }
+
+    .screenshot1ult {
+        margin-right: -72vw;
+    }
+
+    .screenshot2ult {
+        margin-right: 42vw;
+        width: 40%;
+    }
+
+    .screenshot3ult {
+        margin-top: 7vw;
+        margin-right: 72vw;
+        width: 40%;
+    }
+
+    .v1 {
+        margin-right: -57vw;
+        width: 20%;
+        margin-top: 5vw;
+    }
+
+    .game4 {
+        margin-top: -5vw;
+    }
+
+    .screenshot1cof {
+        width: 50%;
+        margin-right: -5vw;
+    }
+
+    .screenshot2cof {
+        margin-right: 2vw;
+    }
+
+    .screenshot3cof {
+        width: 35%;
+        margin-right: 90vw;
+        margin-top: 5vw;
+    }
+
+    .simon {
+        width: 12%;
+        transform: scaleX(-1);
+        margin-right: -52vw;
+        margin-top: 5vw;
+    }
 
 }
 
+/* MEDIA QUERIES CHANGES */
+
+
 @media only screen and (max-width: 1440px) {
-    .flip-card-front h1 {
+    .flip-card-front h1,
+    .flip-card-back h1 {
         -webkit-text-stroke: 6.5px #1F1D1C;
     }
 }
@@ -286,7 +556,8 @@ img:nth-child(2) {
         transform: translateX(-45vw);
     }
 
-    .flip-card-front h1 {
+    .flip-card-front h1,
+    .flip-card-back h1 {
         -webkit-text-stroke: 5px #1F1D1C;
     }
 
@@ -402,7 +673,8 @@ img:nth-child(2) {
         border: 2px solid black;
     }
 
-    .flip-card-front h1 {
+    .flip-card-front h1,
+    .flip-card-back h1 {
         -webkit-text-stroke: 3px #1F1D1C;
     }
 

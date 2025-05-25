@@ -1,6 +1,7 @@
 $(".flip-card").on("click", function () {
     const $original = $(this);
     const offset = $original.offset();
+    const btn = document.querySelector(".back-button");
 
     // Clone and position
     const $clone = $original.clone();
@@ -11,7 +12,7 @@ $(".flip-card").on("click", function () {
         width: $original.outerWidth(),
         height: $original.outerHeight(),
         margin: 0,
-        "z-index": 5
+        "z-index": 8
     });
 
     // Remove original classes that might interfere
@@ -33,13 +34,14 @@ $(".flip-card").on("click", function () {
             top: 0,
             left: 0,
             width: "100vw",
-            height: "100vw",
+            height: "440vw",
             borderRadius: 0
         });
     }, 1500);
 
     // Close on click
-    $clone.on("click", function () {
+    $clone.find('.back-button').on('click', function (e) {
+        e.stopPropagation(); // Prevent the click from bubbling
         $clone.remove();
         $original.css("visibility", "visible");
     });
