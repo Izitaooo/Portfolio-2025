@@ -1,10 +1,11 @@
 $(".flip-card").on("click", function () {
     const $original = $(this);
     const offset = $original.offset();
-    const btn = document.querySelector(".back-button");
+
+
 
     // Clone and position
-    const $clone = $original.clone();
+    const $clone = $original.clone(false, false);
     $clone.css({
         position: "absolute",
         top: offset.top,
@@ -14,6 +15,8 @@ $(".flip-card").on("click", function () {
         margin: 0,
         "z-index": 8
     });
+
+    $clone.find(".js-tilt-glare").remove();  //odstrani glare effect z te karty (delalo to problemy)
 
     // Remove original classes that might interfere
     $clone.removeClass("flip-card");
@@ -27,17 +30,31 @@ $(".flip-card").on("click", function () {
     // Add animation class
     $clone.addClass("spin-animation");
 
+
     // Expand after spin
     setTimeout(() => {
+
+        let expandedHeight = '100vw';
+
+        if ($original.hasClass('card1')) {
+            expandedHeight = '440vw';
+        } else if ($original.hasClass('card2')) {
+            expandedHeight = '255vw';
+        }
+
         $clone.css({
             transition: "all 1s ease-in-out",
             top: 0,
             left: 0,
             width: "100vw",
-            height: "440vw",
-            borderRadius: 0
+            height: expandedHeight,
+            borderRadius: 0,
         });
     }, 1500);
+
+    setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 2200);
 
     // Close on click
     $clone.find('.back-button').on('click', function (e) {

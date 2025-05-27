@@ -73,7 +73,7 @@ body {
     transform: translateX(-5vw) translateY(-8vh);
 }
 
-.split {
+.text-split {
     width: 50%;
 }
 
@@ -100,7 +100,7 @@ body {
     left: 3vw;  /* optional: move left to overlap more over the "M" */
 }
 
-.broun {
+.row {
     background-color: #443C3D;
     height: 18vh;
     width: 100vw;
@@ -128,13 +128,13 @@ body {
 
 /* CARD SECTION */
 
-.socent {
+.cardholder {
     width: 100%;
     top: 20vh;
     display: flex;
     justify-content:center;
     align-items: center;
-    gap: 10vw;
+    gap: 15vw;
     position: relative;
     z-index: 5;
 }
@@ -211,9 +211,10 @@ img:nth-child(2) {
     letter-spacing: 1vw;
 }
 
-.inner-data-games {
+.inner-data {
     display: none;
 }
+
 
 /* Style the back side */
 .flip-card-back {
@@ -227,6 +228,8 @@ img:nth-child(2) {
     align-items: center;
 }
 
+/* END OF CARD SECTION */
+
 .rectangle2 {
     position: absolute;
     width: 170vw;
@@ -236,14 +239,14 @@ img:nth-child(2) {
     z-index: 4;
 }
 
-.borderbottom {
+.slanted-rectangle2 {
     height: 90vh;
     overflow: hidden;
     position: relative;
     top: -65vh;
 }
 
-.broun2 {
+.phone-bottom {
     display: none;
 }
 
@@ -265,11 +268,11 @@ img:nth-child(2) {
         display: none;
     }
 
-    .inner-data-games {
+    .inner-data {
         display: block;
     }
 
-    .black {
+    .inside-card {
         width: 95vw;
         height: 435vw;
         background-color: #E2D8CC;
@@ -304,9 +307,8 @@ img:nth-child(2) {
         -webkit-text-stroke: 0.5vw #1F1D1C;
         paint-order: stroke fill;
         font-size: clamp(2.5rem, 6vw, 15rem);
-        margin: 0;
         width: 50%;
-        height: 100%;
+        margin-top: 1vw;
     }
 
     .infotext {
@@ -342,13 +344,13 @@ img:nth-child(2) {
         width: 100%;
     }
 
-    .gametext {
+    .indivtext {
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    .gametext p {
+    .indivtext p {
         font-family: 'Mochiy Pop One';
         font-weight: 400;
         color: #E2D8CC;
@@ -387,7 +389,8 @@ img:nth-child(2) {
 
     .credits a,
     .credits-right a {
-        color: #E2D8CC;
+        color: #B59B79;
+        text-decoration: none;
     }
 
     .picholder {
@@ -400,7 +403,7 @@ img:nth-child(2) {
         margin-top: 5vw;
     }
 
-    .screenshot {
+    .pic {
         width: 45%;
         height: auto;
         border-radius: 1vw;
@@ -434,7 +437,7 @@ img:nth-child(2) {
         bottom: 12vw;
     }
 
-    .games-divider {
+    .part-divider {
         background-color: #443C3D;
         width: 100%;
         height: 9vw;
@@ -535,6 +538,83 @@ img:nth-child(2) {
         margin-top: 5vw;
     }
 
+    /* MUSIC SECTION*/
+
+    .music-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 40vw;
+        padding-bottom: 4vw;
+    }
+
+    .music-group h3 {
+        width: 0%;
+        line-height: 8vw;
+    }
+
+    .screenshot1-music {
+        width:15%;
+
+    }
+
+    .screenshot2-music {
+        width:45%;
+        z-index: 2;
+        margin-right: -40vw;
+        margin-bottom: 35vw;
+    }
+
+    .screenshot3-music {
+        width:20%;
+        margin-right: 17vw;
+        margin-bottom: -12vw;
+        z-index: 1;
+    }
+
+    .screenshot4-music {
+        width:35%;
+        margin-right: 10vw;
+        margin-bottom: 5vw;
+    }
+
+    .music2 {
+        margin-top: -5vw;
+    }
+
+    .music-group2 {
+        gap: 0vw;
+    }
+
+    .music-group h3:nth-child(2) {
+        width: 50%;
+    }
+
+    .screenshot2-music2 {
+        width:20%;
+        margin-right: -37vw;
+        margin-bottom: 20vw;
+        z-index: 1;
+    }
+
+    .screenshot3-music2 {
+        width:45%;
+        z-index: 2;
+        margin-right: -5vw;
+        margin-bottom: -12vw;
+
+    }
+
+    .individual-part .credits  {
+        top: -3vw ;
+    }
+
+}
+
+.card2 .inside-card,
+.card3 .inside-card {
+    height: 245vw !important;
 }
 
 /* MEDIA QUERIES CHANGES */
@@ -565,7 +645,7 @@ img:nth-child(2) {
         left: 10vw;
     }
 
-    .borderbottom {
+    .slanted-rectangle2 {
         top: -60vh;
     }
 
@@ -636,7 +716,7 @@ img:nth-child(2) {
         transform: translateY(-50%);
     }
 
-    .broun {
+    .row {
         height: 5vh;
         top: 25vh;
         z-index: -2;
@@ -653,11 +733,11 @@ img:nth-child(2) {
         z-index: -1;
     }
 
-    .split {
+    .text-split {
         width: 40%;
     }
 
-    .socent {
+    .cardholder {
         width: 100%;
         top: -80vh;
         display: flex;
@@ -686,21 +766,21 @@ img:nth-child(2) {
         transform: translateY(-2vh);
     }
 
-    .bodyhelper1 {
+    .phonezigzag {
         height: 40vh;
         overflow: hidden;
         position: relative;
         top: -40vh;
     }
 
-    .bodyhelper2 {
+    .phonezigzag2 {
         height: 40vh;
         overflow: hidden;
         position: relative;
         top: -50vh;
     }
 
-    .broun2 {
+    .phone-bottom {
         display: flex;
         background-color: #443C3D;
         height: 5vh;
@@ -715,14 +795,38 @@ img:nth-child(2) {
         display: none;
     }
 
-    .borderbottom {
+    .slanted-rectangle2 {
         display: none;
     }
 }
 
 @media only screen and (max-width: 370px) {
-    .socent {
+    .cardholder {
         top: -79vh;
+    }
+
+
+    .flip-card-front.active {
+
+        h4 {
+            font-size: clamp(1.8rem, 6vw, 15rem);
+        }
+
+        h3 {
+            font-size: clamp(2rem, 9vw, 15rem);
+        }
+
+        .infotext {
+            height: 7%;
+        }
+
+        .music-group {
+            gap: 50vw;
+        }
+
+        .music-group2 {
+            gap: 0;
+        }
     }
 }
 
@@ -736,7 +840,7 @@ img:nth-child(2) {
         transform: translateX(-11vw) translateY(-5vh);
     }
 
-    .socent {
+    .cardholder {
         top: -78vh;
     }
 
