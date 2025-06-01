@@ -49,7 +49,6 @@ body {
     transition: all 1s ease;
 }
 
-
 .rightborder {
     height: 100%;
     width: 15%;
@@ -61,7 +60,7 @@ body {
     justify-content: center;
 }
 
-.cube {
+.social-holder {
     height: auto;
     width: 30%;
     background-color: #443C3D;
@@ -222,14 +221,14 @@ h3 {
 }
 
 @media only screen and (max-width: 1300px) {
-    .cube {
+    .social-holder {
         width: 35%;
         gap: 2vw;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    .cube {
+    .social-holder {
         width: 40%;
         gap: 3vw;
     }
@@ -242,7 +241,7 @@ h3 {
 }
 
 @media only screen and (max-width: 700px) {
-    .cube {
+    .social-holder {
         width: 50%;
         gap: 5vw;
     }
@@ -267,13 +266,13 @@ h3 {
         width: 100%;
     }
 
-    .cube {
+    .social-holder {
         width: 100%;
         height: 30%;
         gap: 0vw;
     }
 
-    .cube img {
+    .social-holder img {
         width: 30%;
     }
 
@@ -304,7 +303,6 @@ h3 {
     .rightborder {
         display: none;
     }
-
 }
 
 @media only screen and (max-width: 450px) {
@@ -335,6 +333,5 @@ h3 {
     .linkholder2 {
         margin-top: 23%;
     }
-
 }
 

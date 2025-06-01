@@ -1,4 +1,4 @@
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll(".flip-card-front");
 
     VanillaTilt.init(cards);

@@ -50,26 +50,26 @@ a {
     bottom: 0;
 }
 
-.hillhold {
+.bottom-squares {
     position:fixed;
     bottom: 0;
     width: clamp(30%, 45%, 100%);
 }
 
-.hillhold svg {
+.bottom-squares svg {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.hillhold2 {
+.top-squares {
     position:fixed;
     top: 0;
     right: 0;
     width: clamp(30%, 45%, 100%);
 }
 
-.hillhold2 svg {
+.top-squares svg {
     width: 100%;
     height: auto;
     display: block;
@@ -163,11 +163,6 @@ a {
         transform: translateY(0);
     }
 }
-
-.transformation {
-    transition-property: transform;
-}
-
 
 h2 {
     writing-mode: vertical-rl;

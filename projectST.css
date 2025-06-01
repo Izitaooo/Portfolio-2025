@@ -71,7 +71,7 @@ p {
     width: 80%
 }
 
-.fullbox {
+.project-hold {
     display: flex;
     flex-direction: column;
     gap: 10vh;
@@ -79,21 +79,14 @@ p {
     justify-content: center;
 }
 
-.fullbox img {
+.project-hold img {
     width: 40%;
     height: auto;
     border-radius: 2.6vw;
     border: 0.3vw solid #E2D8CC;
 }
 
-.leftie {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-}
-
-.rightie {
+.project {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,19 +150,19 @@ p {
         width: 9vw;
     }
 
-    .fullbox img {
+    .project-hold img {
         width: 70%;
     }
 
-    .fullbox  {
+    .project-hold  {
         gap: 5vh;
     }
 
-    .leftie {
+    .project:nth-child(even) {
         flex-direction: column;
     }
 
-    .rightie {
+    .project {
         flex-direction: column-reverse;
     }
 

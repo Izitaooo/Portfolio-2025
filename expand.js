@@ -2,8 +2,6 @@ $(".flip-card").on("click", function () {
     const $original = $(this);
     const offset = $original.offset();
 
-
-
     // Clone and position
     const $clone = $original.clone(false, false);
     $clone.css({
@@ -29,7 +27,6 @@ $(".flip-card").on("click", function () {
 
     // Add animation class
     $clone.addClass("spin-animation");
-
 
     // Expand after spin
     setTimeout(() => {

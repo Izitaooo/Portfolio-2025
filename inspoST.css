@@ -117,7 +117,7 @@ body {
     transform: translateY(50%);
 }
 
-.remover {
+.remover {             /* opravuje bug s obdelnikama */
     position: absolute;
     top: 100vh;
     height: 50vh;
@@ -160,7 +160,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-
 
 @keyframes cardSpin {
     0% { transform: rotateY(0); }
@@ -215,7 +214,6 @@ img:nth-child(2) {
     display: none;
 }
 
-
 /* Style the back side */
 .flip-card-back {
     background-color: #E2D8CC;
@@ -255,8 +253,7 @@ img:nth-child(2) {
     to {background-color: #1F1D1C;}
 }
 
-
-/* STUPID CARD SECTION */
+/* VNITŘEK KARET PO EXPANZI */
 
 
 .flip-card-front.active {
@@ -612,8 +609,7 @@ img:nth-child(2) {
 
 }
 
-.card2 .inside-card,
-.card3 .inside-card {
+.card2 .inside-card {
     height: 245vw !important;
 }
 
